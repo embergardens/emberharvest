@@ -37,9 +37,15 @@ function emberharvest_locations() {
 		'capability_type'     => 'page',
 		'supports'            => array( 'title', 'page-attributes', 'thumbnail' ),
 		'has_archive'         => true,
-		'rewrite'             => array( 'slug' => 'locations', 'with_front' => false ),
+		'rewrite'             => array(
+			'slug'       => 'locations',
+			'with_front' => false,
+		),
 		'taxonomies'          => array(),
 		'can_export'          => true,
+		'show_in_graphql'     => true,
+		'graphql_single_name' => 'location',
+		'graphql_plural_name' => 'locations',
 	);
 	register_post_type( 'location', $args );
 
