@@ -1,0 +1,297 @@
+{
+    "key": "group_619d7967c812a",
+    "title": "Navigation",
+    "fields": [
+        {
+            "key": "field_619d79b0176d5",
+            "label": "Locations",
+            "name": "locations",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "row",
+            "button_label": "Add State",
+            "sub_fields": [
+                {
+                    "key": "field_619d79d9176d6",
+                    "label": "State",
+                    "name": "state",
+                    "type": "select",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "choices": {
+                        "AL": "Alabama",
+                        "AK": "Alaska",
+                        "AZ": "Arizona",
+                        "AR": "Arkansas",
+                        "CA": "California",
+                        "CO": "Colorado",
+                        "CT": "Connecticut",
+                        "DE": "Delaware",
+                        "DC": "District of Columbia",
+                        "FL": "Florida",
+                        "GA": "Georgia",
+                        "HI": "Hawaii",
+                        "ID": "Idaho",
+                        "IL": "Illinois",
+                        "IN": "Indiana",
+                        "IA": "Iowa",
+                        "KS": "Kansas",
+                        "KY": "Kentucky",
+                        "LA": "Louisiana",
+                        "ME": "Maine",
+                        "MD": "Maryland",
+                        "MA": "Massachusetts",
+                        "MI": "Michigan",
+                        "MN": "Minnesota",
+                        "MS": "Mississippi",
+                        "MO": "Missouri",
+                        "MT": "Montana",
+                        "NE": "Nebraska",
+                        "NV": "Nevada",
+                        "NH": "New Hampshire",
+                        "NJ": "New Jersey",
+                        "NM": "New Mexico",
+                        "NY": "New York",
+                        "NC": "North Carolina",
+                        "ND": "North Dakota",
+                        "OH": "Ohio",
+                        "OK": "Oklahoma",
+                        "OR": "Oregon",
+                        "PA": "Pennsylvania",
+                        "RI": "Rhode Island",
+                        "SC": "South Carolina",
+                        "SD": "South Dakota",
+                        "TN": "Tennessee",
+                        "TX": "Texas",
+                        "UT": "Utah",
+                        "VT": "Vermont",
+                        "VA": "Virginia",
+                        "WA": "Washington",
+                        "WV": "West Virginia",
+                        "WI": "Wisconsin",
+                        "WY": "Wyoming"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 1,
+                    "ajax": 0,
+                    "return_format": "value",
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_619d7ad5176d8",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "url",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": "svg"
+                },
+                {
+                    "key": "field_619d7a30176d7",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "post_object",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "post_type": [
+                        "location"
+                    ],
+                    "taxonomy": "",
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "return_format": "object",
+                    "ui": 1
+                },
+                {
+                    "key": "field_619d7c82176d9",
+                    "label": "Cities",
+                    "name": "cities",
+                    "type": "relationship",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "post_type": [
+                        "location"
+                    ],
+                    "taxonomy": "",
+                    "filters": "",
+                    "elements": "",
+                    "min": "",
+                    "max": "",
+                    "return_format": "object"
+                }
+            ]
+        },
+        {
+            "key": "field_619d7ce8ece84",
+            "label": "Quick Links",
+            "name": "quick_links",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "collapsed": "",
+            "min": 0,
+            "max": 2,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_619d7d1aece85",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_619d7d33ece86",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_619d7d5bece87",
+                    "label": "Icon",
+                    "name": "icon",
+                    "type": "image",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "array",
+                    "preview_size": "thumbnail",
+                    "library": "all",
+                    "min_width": "",
+                    "min_height": "",
+                    "min_size": "",
+                    "max_width": "",
+                    "max_height": "",
+                    "max_size": "",
+                    "mime_types": ".svg"
+                }
+            ]
+        },
+        {
+            "key": "field_619d7dc2ece88",
+            "label": "Instagram",
+            "name": "instagram",
+            "type": "link",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "return_format": "array"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "options_page",
+                "operator": "==",
+                "value": "acf-options-navigation"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 1,
+    "graphql_field_name": "navigation",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": "",
+    "modified": 1638048449
+}
