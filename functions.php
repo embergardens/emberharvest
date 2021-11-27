@@ -7,37 +7,6 @@
 
 add_theme_support( 'post-thumbnails' );
 
-// ADD ACF OPTIONS PAGE.
-if ( function_exists( 'acf_add_options_page' ) ) {
-	acf_add_options_page(
-		array(
-			'page_title' => 'Site Options',
-			'menu_title' => 'Options',
-			'menu_slug'  => 'site-options',
-			'capability' => 'edit_posts',
-			'redirect'   => true,
-			'position'   => '1',
-		)
-	);
-
-	acf_add_options_sub_page(
-		array(
-			'page_title'  => 'Global Options',
-			'menu_title'  => 'Global',
-			'parent_slug' => 'site-options',
-		)
-	);
-
-	acf_add_options_sub_page(
-		array(
-			'page_title'  => 'Navigation Options',
-			'menu_title'  => 'Navigation',
-			'parent_slug' => 'site-options',
-		)
-	);
-
-}
-
 // REMOVE MENUS FROM ADMIN.
 function remove_menus() {
 	// remove_menu_page( 'index.php' ); // Dashboard.
@@ -85,17 +54,8 @@ add_action( 'do_feed_atom', 'headless_disable_feed', 1 );
 add_action( 'do_feed_rss2_comments', 'headless_disable_feed', 1 );
 add_action( 'do_feed_atom_comments', 'headless_disable_feed', 1 );
 
-// Return `null` if an empty value is returned from ACF.
-if (!function_exists("acf_nullify_empty")) {
-	function acf_nullify_empty($value, $post_id, $field)
-	{
-		if (empty($value)) {
-			return null;
-		}
-		return $value;
-	}
-}
-add_filter( 'acf/format_value', 'acf_nullify_empty', 100, 3 );
+// INCLUDE ACF FUNCTIONS
+require get_template_directory() . '/advanced-custom-fields/acf-functions.php';
 
 // INCLUDE POST TYPES
 require get_template_directory() . '/post-types/locations.php';

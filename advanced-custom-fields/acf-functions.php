@@ -5,15 +5,50 @@
  * @package emberharvest
  */
 
-if (function_exists('acf_add_options_page')) {
+// Return `null` if an empty value is returned from ACF.
+if (!function_exists("acf_nullify_empty")) {
+	function acf_nullify_empty($value, $post_id, $field)
+	{
+		if (empty($value)) {
+			return null;
+		}
+		return $value;
+	}
+}
+add_filter( 'acf/format_value', 'acf_nullify_empty', 100, 3 );
 
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme General Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-general-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
+// ADD ACF OPTIONS PAGE.
+if ( function_exists( 'acf_add_options_page' ) ) {
+	acf_add_options_page(
+		array(
+			'page_title'      => 'Site Options',
+			'menu_title'      => 'Options',
+			'menu_slug'       => 'site-options',
+			'capability'      => 'edit_posts',
+			'redirect'        => true,
+			'position'        => '1',
+			'show_in_graphql' => true,
+		)
+	);
+
+	acf_add_options_sub_page(
+		array(
+			'page_title'      => 'Global Options',
+			'menu_title'      => 'Global',
+			'parent_slug'     => 'site-options',
+			'show_in_graphql' => true,
+		)
+	);
+
+	acf_add_options_sub_page(
+		array(
+			'page_title'      => 'Navigation Options',
+			'menu_title'      => 'Navigation',
+			'parent_slug'     => 'site-options',
+			'show_in_graphql' => true,
+		)
+	);
+
 }
 
 /*
