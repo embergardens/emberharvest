@@ -1,0 +1,58 @@
+{
+    "key": "group_61db2e2a621de",
+    "title": "Content Designer",
+    "fields": [
+        {
+            "key": "field_61db2e51ec964",
+            "label": "Content Designer",
+            "name": "content_designer",
+            "type": "flexible_content",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layouts": {
+                "layout_61db2e5a61481": {
+                    "key": "layout_61db2e5a61481",
+                    "name": "",
+                    "label": "",
+                    "display": "block",
+                    "sub_fields": [],
+                    "min": "",
+                    "max": ""
+                }
+            },
+            "button_label": "Add Row",
+            "min": "",
+            "max": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "show_in_graphql": 0,
+    "graphql_field_name": "contentDesigner",
+    "map_graphql_types_from_location_rules": 0,
+    "graphql_types": "",
+    "modified": 1641754217
+}

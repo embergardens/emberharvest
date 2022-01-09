@@ -3,6 +3,98 @@
     "title": "Navigation",
     "fields": [
         {
+            "key": "field_61a2b5ebda5aa",
+            "label": "Quick Links",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_619d7ce8ece84",
+            "label": "Quick Links",
+            "name": "quick_links",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "collapsed": "field_619d7d1aece85",
+            "min": 0,
+            "max": 2,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_619d7d1aece85",
+                    "label": "Name",
+                    "name": "name",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
+                {
+                    "key": "field_619d7d33ece86",
+                    "label": "Link",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "array"
+                }
+            ]
+        },
+        {
+            "key": "field_61a2b60dda5ab",
+            "label": "Locations",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
             "key": "field_619d79b0176d5",
             "label": "Locations",
             "name": "locations",
@@ -16,7 +108,7 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "collapsed": "",
+            "collapsed": "field_619d79d9176d6",
             "min": 0,
             "max": 0,
             "layout": "row",
@@ -98,31 +190,6 @@
                     "placeholder": ""
                 },
                 {
-                    "key": "field_619d7ad5176d8",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "return_format": "url",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": "svg"
-                },
-                {
                     "key": "field_619d7a30176d7",
                     "label": "Link",
                     "name": "link",
@@ -172,10 +239,10 @@
             ]
         },
         {
-            "key": "field_619d7ce8ece84",
-            "label": "Quick Links",
-            "name": "quick_links",
-            "type": "repeater",
+            "key": "field_61a2b61dda5ac",
+            "label": "Social",
+            "name": "",
+            "type": "tab",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -185,19 +252,197 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "collapsed": "",
-            "min": 0,
-            "max": 2,
-            "layout": "table",
-            "button_label": "",
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_619d7dc2ece88",
+            "label": "Instagram",
+            "name": "instagram",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "row",
             "sub_fields": [
                 {
-                    "key": "field_619d7d1aece85",
-                    "label": "Name",
-                    "name": "name",
+                    "key": "field_61abe7b6ee4c6",
+                    "label": "Url",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_61abe7ddee4c7",
+                    "label": "Text",
+                    "name": "text",
                     "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61abe755ee4c4",
+            "label": "Twitter",
+            "name": "twitter",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_61abe80cee4c8",
+                    "label": "Url",
+                    "name": "link",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": "array"
+                },
+                {
+                    "key": "field_61abe822ee4c9",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61abe770ee4c5",
+            "label": "Email",
+            "name": "email",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_61abe83dee4ca",
+                    "label": "Email Address",
+                    "name": "address",
+                    "type": "email",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_61abe850ee4cb",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        },
+        {
+            "key": "field_61abe85eee4cc",
+            "label": "Signup",
+            "name": "signup",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "row",
+            "sub_fields": [
+                {
+                    "key": "field_61abe86eee4cd",
+                    "label": "Text",
+                    "name": "text",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -212,12 +457,12 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_619d7d33ece86",
-                    "label": "Link",
-                    "name": "link",
-                    "type": "link",
+                    "key": "field_61abe886ee4ce",
+                    "label": "Button Text",
+                    "name": "button_text",
+                    "type": "text",
                     "instructions": "",
-                    "required": 1,
+                    "required": 0,
                     "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
@@ -225,50 +470,13 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "return_format": "array"
-                },
-                {
-                    "key": "field_619d7d5bece87",
-                    "label": "Icon",
-                    "name": "icon",
-                    "type": "image",
-                    "instructions": "",
-                    "required": 1,
-                    "conditional_logic": 0,
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "show_in_graphql": 1,
-                    "return_format": "array",
-                    "preview_size": "thumbnail",
-                    "library": "all",
-                    "min_width": "",
-                    "min_height": "",
-                    "min_size": "",
-                    "max_width": "",
-                    "max_height": "",
-                    "max_size": "",
-                    "mime_types": ".svg"
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
                 }
             ]
-        },
-        {
-            "key": "field_619d7dc2ece88",
-            "label": "Instagram",
-            "name": "instagram",
-            "type": "link",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "show_in_graphql": 1,
-            "return_format": "array"
         }
     ],
     "location": [
@@ -291,7 +499,9 @@
     "show_in_rest": 0,
     "show_in_graphql": 1,
     "graphql_field_name": "navigation",
-    "map_graphql_types_from_location_rules": 0,
-    "graphql_types": "",
-    "modified": 1638048449
+    "map_graphql_types_from_location_rules": 1,
+    "graphql_types": [
+        "AcfOptionsNavigation"
+    ],
+    "modified": 1638656656
 }
