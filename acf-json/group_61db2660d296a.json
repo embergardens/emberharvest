@@ -214,12 +214,12 @@
                     },
                     "show_in_graphql": 1,
                     "choices": {
-                        "none": "None",
+                        "standard": "Standard",
                         "fullWidth": "Full Width",
                         "halfWidth": "Half Width"
                     },
-                    "default_value": false,
-                    "allow_null": 1,
+                    "default_value": "standard",
+                    "allow_null": 0,
                     "multiple": 0,
                     "ui": 1,
                     "ajax": 0,
@@ -238,7 +238,7 @@
                             {
                                 "field": "field_61db3052c7f39",
                                 "operator": "!=",
-                                "value": "none"
+                                "value": "standard"
                             }
                         ]
                     ],
@@ -274,6 +274,34 @@
                             "max_height": "",
                             "max_size": "",
                             "mime_types": ""
+                        },
+                        {
+                            "key": "field_61db3a1e5dd14",
+                            "label": "Image Opacity",
+                            "name": "opacity",
+                            "type": "range",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61db3272bf54a",
+                                        "operator": "!=empty"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "default_value": 100,
+                            "min": "",
+                            "max": "",
+                            "step": "",
+                            "prepend": "",
+                            "append": "%"
                         },
                         {
                             "key": "field_61db3297bf54b",
@@ -352,7 +380,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -380,7 +408,7 @@
                         ]
                     ],
                     "wrapper": {
-                        "width": "",
+                        "width": "50",
                         "class": "",
                         "id": ""
                     },
@@ -406,36 +434,6 @@
                     },
                     "show_in_graphql": 1,
                     "layouts": {
-                        "layout_61db2a3bcfb48": {
-                            "key": "layout_61db2a3bcfb48",
-                            "name": "textBlock",
-                            "label": "Text Block",
-                            "display": "block",
-                            "sub_fields": [
-                                {
-                                    "key": "field_61db2a764440d",
-                                    "label": "Text",
-                                    "name": "text",
-                                    "type": "wysiwyg",
-                                    "instructions": "",
-                                    "required": 0,
-                                    "conditional_logic": 0,
-                                    "wrapper": {
-                                        "width": "",
-                                        "class": "",
-                                        "id": ""
-                                    },
-                                    "show_in_graphql": 1,
-                                    "default_value": "",
-                                    "tabs": "visual",
-                                    "toolbar": "basic",
-                                    "media_upload": 0,
-                                    "delay": 0
-                                }
-                            ],
-                            "min": "",
-                            "max": ""
-                        },
                         "layout_61db2adf4440e": {
                             "key": "layout_61db2adf4440e",
                             "name": "buttonBlock",
@@ -477,6 +475,31 @@
                                             },
                                             "show_in_graphql": 1,
                                             "return_format": "array"
+                                        },
+                                        {
+                                            "key": "field_61db62ba87a17",
+                                            "label": "Style",
+                                            "name": "style",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "choices": {
+                                                "half": "Half",
+                                                "full": "Full"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": "full",
+                                            "layout": "horizontal",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
                                         }
                                     ]
                                 }
@@ -518,6 +541,36 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_61db2a3bcfb48": {
+                            "key": "layout_61db2a3bcfb48",
+                            "name": "textBlock",
+                            "label": "Text Block",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_61db2a764440d",
+                                    "label": "Text",
+                                    "name": "text",
+                                    "type": "wysiwyg",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "default_value": "",
+                                    "tabs": "visual",
+                                    "toolbar": "limited",
+                                    "media_upload": 0,
+                                    "delay": 0
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
                     "button_label": "Add Block",
@@ -525,6 +578,43 @@
                     "max": ""
                 }
             ]
+        },
+        {
+            "key": "field_61e44a7881c00",
+            "label": "Footer",
+            "name": "",
+            "type": "tab",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "placement": "top",
+            "endpoint": 0
+        },
+        {
+            "key": "field_61e44a8981c01",
+            "label": "Show Page Footer",
+            "name": "show_page_footer",
+            "type": "true_false",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "message": "",
+            "default_value": 1,
+            "ui": 1,
+            "ui_on_text": "",
+            "ui_off_text": ""
         }
     ],
     "location": [
@@ -551,8 +641,11 @@
     "description": "",
     "show_in_rest": 0,
     "show_in_graphql": 1,
-    "graphql_field_name": "defaultPageTemplate",
-    "map_graphql_types_from_location_rules": 0,
-    "graphql_types": "",
-    "modified": 1641756784
+    "graphql_field_name": "acf",
+    "map_graphql_types_from_location_rules": 1,
+    "graphql_types": [
+        "Page",
+        "DefaultTemplate"
+    ],
+    "modified": 1642438561
 }

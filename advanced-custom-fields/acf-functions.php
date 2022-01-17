@@ -58,6 +58,9 @@ if ( function_exists( 'acf_add_options_page' ) ) {
  */
 function harvest_simple_toolbar($toolbars) {
 
+	$toolbars['Limited'] = array();
+	$toolbars['Limited'][1] = array( 'formatselect', 'bold', 'italic', 'underline', 'strikethrough', 'link', 'unlink', 'bullist', 'numlist');
+
 	$toolbars['Simple'] = array();
 	$toolbars['Simple'][1] = array('bold', 'italic', 'underline', 'strikethrough', 'link', 'unlink', 'bullist', 'numlist');
 
