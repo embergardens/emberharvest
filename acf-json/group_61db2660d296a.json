@@ -277,8 +277,8 @@
                         },
                         {
                             "key": "field_61db3a1e5dd14",
-                            "label": "Image Opacity",
-                            "name": "opacity",
+                            "label": "Brightness",
+                            "name": "brightness",
                             "type": "range",
                             "instructions": "",
                             "required": 0,
@@ -298,8 +298,8 @@
                             "show_in_graphql": 1,
                             "default_value": 100,
                             "min": "",
-                            "max": "",
-                            "step": "",
+                            "max": 150,
+                            "step": 5,
                             "prepend": "",
                             "append": "%"
                         },
@@ -597,12 +597,12 @@
             "endpoint": 0
         },
         {
-            "key": "field_61e44a8981c01",
-            "label": "Show Page Footer",
-            "name": "show_page_footer",
-            "type": "true_false",
+            "key": "field_61ec359007c4c",
+            "label": "Footer Options",
+            "name": "footer_options",
+            "type": "group",
             "instructions": "",
-            "required": 1,
+            "required": 0,
             "conditional_logic": 0,
             "wrapper": {
                 "width": "",
@@ -610,11 +610,51 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "message": "",
-            "default_value": 1,
-            "ui": 1,
-            "ui_on_text": "",
-            "ui_off_text": ""
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_61ec359a07c4d",
+                    "label": "Hide Footer",
+                    "name": "hide_footer",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Hide Footer",
+                    "ui_off_text": "Show Footer"
+                },
+                {
+                    "key": "field_61ec35c707c4e",
+                    "label": "Footer Links",
+                    "name": "footer_links",
+                    "type": "clone",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "clone": [
+                        "field_61ec2738a0c7d"
+                    ],
+                    "display": "seamless",
+                    "layout": "block",
+                    "prefix_label": 0,
+                    "prefix_name": 0
+                }
+            ]
         }
     ],
     "location": [
@@ -647,5 +687,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1642438561
+    "modified": 1642870440
 }
