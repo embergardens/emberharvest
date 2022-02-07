@@ -8,4 +8,4 @@
 
 ?>
 
-<!-- gatsbyjs: templates/home/index.js -->
+<!-- gatsbyjs: templates/home/simple.js -->
