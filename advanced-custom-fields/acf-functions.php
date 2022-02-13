@@ -75,6 +75,7 @@ function harvest_simple_toolbar($toolbars) {
 }
 add_filter('acf/fields/wysiwyg/toolbars', 'harvest_simple_toolbar');
 
+
 // Return value and label to select, radio and checkboxes
 // function locations_select_return_array( $value, $field, $root, $id ) {
 // 	if ( $field['key'] == 'locations__state' ) {

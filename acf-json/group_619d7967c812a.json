@@ -457,10 +457,10 @@
                     "maxlength": ""
                 },
                 {
-                    "key": "field_61abe886ee4ce",
-                    "label": "Button Text",
-                    "name": "button_text",
-                    "type": "text",
+                    "key": "field_6209777cfc041",
+                    "label": "Form",
+                    "name": "gravity_form_select",
+                    "type": "select",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -470,11 +470,17 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": "",
-                    "maxlength": ""
+                    "choices": {
+                        "1": "General Contact Form",
+                        "2": "Mailing List"
+                    },
+                    "default_value": false,
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
                 }
             ]
         }
@@ -503,5 +509,5 @@
     "graphql_types": [
         "AcfOptionsNavigation"
     ],
-    "modified": 1642878328
+    "modified": 1644788987
 }

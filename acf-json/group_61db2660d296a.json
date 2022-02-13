@@ -174,7 +174,7 @@
             },
             "show_in_graphql": 1,
             "collapsed": "field_61db28134440a",
-            "min": 1,
+            "min": 0,
             "max": 0,
             "layout": "block",
             "button_label": "Add Section",
@@ -838,6 +838,280 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_6207fcb333dcc": {
+                            "key": "layout_6207fcb333dcc",
+                            "name": "text_image_block",
+                            "label": "Text + Image Block",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6207fcca33dcd",
+                                    "label": "Image Layout",
+                                    "name": "image_layout",
+                                    "type": "button_group",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "choices": {
+                                        "left": "<i class=\"dashicons dashicons-align-pull-left\"><\/i>",
+                                        "right": "<i class=\"dashicons dashicons-align-pull-right\"><\/i>"
+                                    },
+                                    "allow_null": 0,
+                                    "default_value": "left",
+                                    "layout": "horizontal",
+                                    "return_format": "value"
+                                },
+                                {
+                                    "key": "field_6207fde233dce",
+                                    "label": "Image Shape",
+                                    "name": "image_shape",
+                                    "type": "true_false",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "50",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "message": "",
+                                    "default_value": 1,
+                                    "ui": 1,
+                                    "ui_on_text": "Circle",
+                                    "ui_off_text": "Square"
+                                },
+                                {
+                                    "key": "field_6207fe1833dcf",
+                                    "label": "Image",
+                                    "name": "image",
+                                    "type": "image",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "return_format": "array",
+                                    "preview_size": "medium",
+                                    "library": "all",
+                                    "min_width": "",
+                                    "min_height": "",
+                                    "min_size": "",
+                                    "max_width": "",
+                                    "max_height": "",
+                                    "max_size": "",
+                                    "mime_types": ""
+                                },
+                                {
+                                    "key": "field_6207fe4133dd0",
+                                    "label": "Text",
+                                    "name": "textGroup",
+                                    "type": "group",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "block",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6207fe9733dd1",
+                                            "label": "Eyebrow",
+                                            "name": "eyebrow",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_6207fea133dd2",
+                                            "label": "Title",
+                                            "name": "title",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_6207feaa33dd3",
+                                            "label": "Subtitle",
+                                            "name": "subtitle",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "maxlength": ""
+                                        },
+                                        {
+                                            "key": "field_6207feb233dd4",
+                                            "label": "Content",
+                                            "name": "content",
+                                            "type": "wysiwyg",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "tabs": "visual",
+                                            "toolbar": "limited",
+                                            "media_upload": 0,
+                                            "delay": 0
+                                        }
+                                    ]
+                                },
+                                {
+                                    "key": "field_6208071992e87",
+                                    "label": "Buttons",
+                                    "name": "buttonGroup",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "collapsed": "field_6208073a92e88",
+                                    "min": 0,
+                                    "max": 2,
+                                    "layout": "block",
+                                    "button_label": "Add Button",
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6208073a92e88",
+                                            "label": "Button",
+                                            "name": "button",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "return_format": "array"
+                                        },
+                                        {
+                                            "key": "field_6208074a92e89",
+                                            "label": "Style",
+                                            "name": "style",
+                                            "type": "radio",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "choices": {
+                                                "half": "Half",
+                                                "full": "Full"
+                                            },
+                                            "allow_null": 0,
+                                            "other_choice": 0,
+                                            "default_value": "full",
+                                            "layout": "horizontal",
+                                            "return_format": "value",
+                                            "save_other_choice": 0
+                                        }
+                                    ]
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
+                        },
+                        "layout_62081b3d497b0": {
+                            "key": "layout_62081b3d497b0",
+                            "name": "form_block",
+                            "label": "Form Block",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_62082af3116c4",
+                                    "label": "Form",
+                                    "name": "gravity_form_select",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 1,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "choices": {
+                                        "1": "General Contact Form"
+                                    },
+                                    "default_value": false,
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 1,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
                     "button_label": "Add Block",
@@ -954,5 +1228,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1644102565
+    "modified": 1644702471
 }
