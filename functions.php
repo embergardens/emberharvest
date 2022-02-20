@@ -79,8 +79,8 @@ add_action( 'init', 'emberharvest_menus' );
 add_filter( 'graphql_response_headers_to_send', function( $headers ) {
 
 	$possible_origins = [
-		//"http://localhost:8000",
-		"https://staging.embergardens.com",
+		"http://localhost:8000",
+		//"https://staging.embergardens.com",
 		//"https://embergardens.com",
 	];
 
