@@ -919,7 +919,7 @@
                                     "name": "textGroup",
                                     "type": "group",
                                     "instructions": "",
-                                    "required": 1,
+                                    "required": 0,
                                     "conditional_logic": 0,
                                     "wrapper": {
                                         "width": "",
@@ -1099,7 +1099,8 @@
                                     },
                                     "show_in_graphql": 1,
                                     "choices": {
-                                        "1": "General Contact Form"
+                                        "1": "General Contact Form",
+                                        "2": "Mailing List"
                                     },
                                     "default_value": false,
                                     "allow_null": 0,
@@ -1228,5 +1229,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1644702471
+    "modified": 1645893739
 }

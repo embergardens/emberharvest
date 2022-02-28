@@ -234,6 +234,26 @@
                     "maxlength": ""
                 },
                 {
+                    "key": "field_621a5c3e54d88",
+                    "label": "Enable Local Storage",
+                    "name": "enable_local_storage",
+                    "type": "true_false",
+                    "instructions": "If enabled, a checkbox will appear for the user that says \"Remember Me?\". Checking this option would allow the user to save their status into their browsers local storage which has no expiration date.",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "message": "",
+                    "default_value": 0,
+                    "ui": 1,
+                    "ui_on_text": "Enable",
+                    "ui_off_text": "Disable"
+                },
+                {
                     "key": "field_62101657014d7",
                     "label": "Background Image",
                     "name": "background_image",
@@ -283,5 +303,5 @@
     "graphql_field_name": "globalOptions",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1645221505
+    "modified": 1645894941
 }
