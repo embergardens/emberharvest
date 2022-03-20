@@ -5,6 +5,8 @@
  * @see https://github.com/DannyvanHolten/acf-gravityforms-add-on/blob/ec793debf47fc40f8c3dadfd5d1d999cfd0b594a/resources/FieldForV4.php
  */
 
+//namespace ACFGravityformsField;
+
 use GFFormsModel;
 
 function acf_load_gravity_form_choices( $field ) {
