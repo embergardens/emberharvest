@@ -8,4 +8,4 @@
 
 ?>
 
-<!-- gatsbyjs: templates/home/listing.js -->
+<!-- gatsbyjs: templates/pages/listing.js -->
