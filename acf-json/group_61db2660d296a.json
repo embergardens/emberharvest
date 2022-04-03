@@ -276,6 +276,63 @@
                             "mime_types": ""
                         },
                         {
+                            "key": "field_624a08a592f34",
+                            "label": "Image Size",
+                            "name": "image_size",
+                            "type": "button_group",
+                            "instructions": "<strong>Cover<\/strong> will stretch the image to fill the viewport at all times.\r\n<strong>Contain<\/strong> scales the image to maintain its aspect ratio while fitting within the viewport.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61db3052c7f39",
+                                        "operator": "==",
+                                        "value": "halfWidth"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "choices": {
+                                "cover": "Cover",
+                                "contain": "Contain"
+                            },
+                            "allow_null": 0,
+                            "default_value": "cover",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_624a09cc92f35",
+                            "label": "Image Background Color",
+                            "name": "image_background_color",
+                            "type": "color_picker",
+                            "instructions": "(Option Override) - When the image size is set to contain, there are certain viewports where the image will not fill the entire area. By default the color of this area is the most dominant color in the image. This allows you to override that color to something specific.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_624a08a592f34",
+                                        "operator": "==",
+                                        "value": "contain"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "default_value": "#FFFFFF",
+                            "enable_opacity": 0,
+                            "return_format": "string"
+                        },
+                        {
                             "key": "field_61db3a1e5dd14",
                             "label": "Brightness",
                             "name": "brightness",
@@ -305,20 +362,12 @@
                         },
                         {
                             "key": "field_61db3297bf54b",
-                            "label": "Color",
+                            "label": "Overlay Color",
                             "name": "color",
                             "type": "select",
                             "instructions": "",
                             "required": 0,
-                            "conditional_logic": [
-                                [
-                                    {
-                                        "field": "field_61db3052c7f39",
-                                        "operator": "!=",
-                                        "value": "halfWidth"
-                                    }
-                                ]
-                            ],
+                            "conditional_logic": 0,
                             "wrapper": {
                                 "width": "",
                                 "class": "",
@@ -330,7 +379,8 @@
                                 "plum": "Plum",
                                 "rose": "Rose",
                                 "coral": "Coral",
-                                "white": "White"
+                                "white": "White",
+                                "none": "None"
                             },
                             "default_value": "gradient",
                             "allow_null": 0,
@@ -368,6 +418,37 @@
                             },
                             "allow_null": 0,
                             "default_value": "right",
+                            "layout": "horizontal",
+                            "return_format": "value"
+                        },
+                        {
+                            "key": "field_624a073e92f33",
+                            "label": "Text Color",
+                            "name": "text_color",
+                            "type": "button_group",
+                            "instructions": "If you choose not to have a background color overlay, this allows you to select the color of the text for this section.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_61db3297bf54b",
+                                        "operator": "==",
+                                        "value": "none"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "show_in_graphql": 1,
+                            "choices": {
+                                "light": "Light",
+                                "dark": "Dark"
+                            },
+                            "allow_null": 0,
+                            "default_value": "dark",
                             "layout": "horizontal",
                             "return_format": "value"
                         }
@@ -1229,5 +1310,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1645893739
+    "modified": 1649025174
 }

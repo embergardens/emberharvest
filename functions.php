@@ -75,24 +75,3 @@ function emberharvest_menus() {
 }
 
 add_action( 'init', 'emberharvest_menus' );
-
-add_filter( 'graphql_response_headers_to_send', function( $headers ) {
-
-	$possible_origins = [
-		"http://localhost:8000",
-		//"https://staging.embergardens.com",
-		//"https://embergardens.com",
-	];
-
-	foreach ( $possible_origins as $origin ) {
-
-		return array_merge(
-			$headers, [
-				'Access-Control-Allow-Origin'      => $origin,
-				'Access-Control-Allow-Methods'     => 'POST, GET, OPTIONS, PUT, DELETE',
-				'Access-Control-Allow-Credentials' => 'true',
-			]
-		);
-	}
-
-} );
