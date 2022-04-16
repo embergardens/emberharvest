@@ -344,6 +344,11 @@
                                     {
                                         "field": "field_61db3272bf54a",
                                         "operator": "!=empty"
+                                    },
+                                    {
+                                        "field": "field_61db3052c7f39",
+                                        "operator": "!=",
+                                        "value": "halfWidth"
                                     }
                                 ]
                             ],
@@ -364,7 +369,7 @@
                             "key": "field_61db3297bf54b",
                             "label": "Overlay Color",
                             "name": "color",
-                            "type": "select",
+                            "type": "button_group",
                             "instructions": "",
                             "required": 0,
                             "conditional_logic": 0,
@@ -382,13 +387,10 @@
                                 "white": "White",
                                 "none": "None"
                             },
-                            "default_value": "gradient",
                             "allow_null": 0,
-                            "multiple": 0,
-                            "ui": 1,
-                            "ajax": 0,
-                            "return_format": "value",
-                            "placeholder": ""
+                            "default_value": "none",
+                            "layout": "horizontal",
+                            "return_format": "value"
                         },
                         {
                             "key": "field_61db3375bf54c",
@@ -1310,5 +1312,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1649025174
+    "modified": 1650133565
 }
