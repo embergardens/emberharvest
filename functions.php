@@ -15,6 +15,12 @@ function remove_menus() {
 }
 add_action("admin_menu", "remove_menus");
 
+function my_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('comments');
+}
+add_action( 'wp_before_admin_bar_render', 'my_admin_bar_render' );
+
 // REORDER MENUS IN ADMIN.
 function headless_custom_menu_order( $menu_ord ) {
 	if ( ! $menu_ord ) return true;
@@ -75,3 +81,11 @@ function emberharvest_menus() {
 }
 
 add_action( 'init', 'emberharvest_menus' );
+
+add_filter( 'graphql_response_headers_to_send', function( $headers ) {
+	return array_merge( $headers, [
+		'Access-Control-Allow-Origin'  => '*',
+		'Access-Control-Allow-Methods' => 'POST, GET, OPTIONS, PUT, DELETE',
+		'Access-Control-Allow-Credentials' => 'true'
+	] );
+} );
