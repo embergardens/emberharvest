@@ -259,8 +259,9 @@
                 "class": "",
                 "id": ""
             },
+            "show_in_graphql": 1,
             "collapsed": "",
-            "min": 1,
+            "min": 0,
             "max": 0,
             "layout": "block",
             "button_label": "Add Section",
@@ -356,5 +357,5 @@
     "graphql_field_name": "acf",
     "map_graphql_types_from_location_rules": 0,
     "graphql_types": "",
-    "modified": 1644103717
+    "modified": 1657977635
 }
