@@ -6,6 +6,7 @@
             "key": "field_61a2b5ebda5aa",
             "label": "Quick Links",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -23,6 +24,7 @@
             "key": "field_619d7ce8ece84",
             "label": "Quick Links",
             "name": "quick_links",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -37,12 +39,13 @@
             "min": 0,
             "max": 2,
             "layout": "table",
-            "button_label": "",
+            "button_label": "Add Row",
             "sub_fields": [
                 {
                     "key": "field_619d7d1aece85",
                     "label": "Name",
                     "name": "name",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 1,
@@ -57,12 +60,14 @@
                     "placeholder": "",
                     "prepend": "",
                     "append": "",
-                    "maxlength": ""
+                    "maxlength": "",
+                    "parent_repeater": "field_619d7ce8ece84"
                 },
                 {
                     "key": "field_619d7d33ece86",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 1,
@@ -73,14 +78,17 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "return_format": "array"
+                    "return_format": "array",
+                    "parent_repeater": "field_619d7ce8ece84"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_61a2b60dda5ab",
             "label": "Locations",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -98,6 +106,7 @@
             "key": "field_619d79b0176d5",
             "label": "Locations",
             "name": "locations",
+            "aria-label": "",
             "type": "repeater",
             "instructions": "",
             "required": 0,
@@ -118,6 +127,7 @@
                     "key": "field_619d79d9176d6",
                     "label": "State",
                     "name": "state",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 1,
@@ -187,12 +197,14 @@
                     "ui": 1,
                     "ajax": 0,
                     "return_format": "value",
-                    "placeholder": ""
+                    "placeholder": "",
+                    "parent_repeater": "field_619d79b0176d5"
                 },
                 {
                     "key": "field_619d7a30176d7",
                     "label": "Link",
                     "name": "link",
+                    "aria-label": "",
                     "type": "post_object",
                     "instructions": "",
                     "required": 1,
@@ -210,12 +222,14 @@
                     "allow_null": 0,
                     "multiple": 0,
                     "return_format": "object",
-                    "ui": 1
+                    "ui": 1,
+                    "parent_repeater": "field_619d79b0176d5"
                 },
                 {
                     "key": "field_619d7c82176d9",
                     "label": "Cities",
                     "name": "cities",
+                    "aria-label": "",
                     "type": "relationship",
                     "instructions": "",
                     "required": 0,
@@ -234,14 +248,17 @@
                     "elements": "",
                     "min": "",
                     "max": "",
-                    "return_format": "object"
+                    "return_format": "object",
+                    "parent_repeater": "field_619d79b0176d5"
                 }
-            ]
+            ],
+            "rows_per_page": 20
         },
         {
             "key": "field_61a2b61dda5ac",
             "label": "Social",
             "name": "",
+            "aria-label": "",
             "type": "tab",
             "instructions": "",
             "required": 0,
@@ -259,6 +276,7 @@
             "key": "field_619d7dc2ece88",
             "label": "Instagram",
             "name": "instagram",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -275,6 +293,7 @@
                     "key": "field_61abe7b6ee4c6",
                     "label": "Url",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -291,6 +310,7 @@
                     "key": "field_61abe7ddee4c7",
                     "label": "Text",
                     "name": "text",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -313,6 +333,7 @@
             "key": "field_61abe755ee4c4",
             "label": "Twitter",
             "name": "twitter",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -329,6 +350,7 @@
                     "key": "field_61abe80cee4c8",
                     "label": "Url",
                     "name": "link",
+                    "aria-label": "",
                     "type": "link",
                     "instructions": "",
                     "required": 0,
@@ -345,6 +367,7 @@
                     "key": "field_61abe822ee4c9",
                     "label": "Text",
                     "name": "text",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -367,6 +390,7 @@
             "key": "field_61abe770ee4c5",
             "label": "Email",
             "name": "email",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -383,7 +407,8 @@
                     "key": "field_61abe83dee4ca",
                     "label": "Email Address",
                     "name": "address",
-                    "type": "email",
+                    "aria-label": "",
+                    "type": "link",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -393,15 +418,13 @@
                         "id": ""
                     },
                     "show_in_graphql": 1,
-                    "default_value": "",
-                    "placeholder": "",
-                    "prepend": "",
-                    "append": ""
+                    "return_format": "array"
                 },
                 {
                     "key": "field_61abe850ee4cb",
                     "label": "Text",
                     "name": "text",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -424,6 +447,7 @@
             "key": "field_61abe85eee4cc",
             "label": "Signup",
             "name": "signup",
+            "aria-label": "",
             "type": "group",
             "instructions": "",
             "required": 0,
@@ -440,6 +464,7 @@
                     "key": "field_61abe86eee4cd",
                     "label": "Text",
                     "name": "text",
+                    "aria-label": "",
                     "type": "text",
                     "instructions": "",
                     "required": 0,
@@ -460,6 +485,7 @@
                     "key": "field_6209777cfc041",
                     "label": "Form",
                     "name": "gravity_form_select",
+                    "aria-label": "",
                     "type": "select",
                     "instructions": "",
                     "required": 0,
@@ -509,5 +535,5 @@
     "graphql_types": [
         "AcfOptionsNavigation"
     ],
-    "modified": 1644788987
+    "modified": 1668900769
 }
