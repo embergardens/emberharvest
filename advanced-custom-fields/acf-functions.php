@@ -91,7 +91,7 @@ add_filter('tiny_mce_before_init', function($init_array) {
         'emphasized' => [
             'selector' => 'p',
             'classes'  => 'emphasized-paragraph',
-			'styles'   => array('font-size' => 'var(--fontSize-emphasized, 26px)')
+			'styles'   => array('font-size' => 'var(--fontSize-emphasized, 22px)')
         ],
     ], JSON_THROW_ON_ERROR);
 
