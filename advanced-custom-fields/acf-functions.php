@@ -84,3 +84,30 @@ add_filter('acf/fields/wysiwyg/toolbars', 'harvest_simple_toolbar');
 // 	return $value;
 // }
 // add_filter( 'graphql_acf_field_value', 'locations_select_return_array', 10, 4 );
+
+add_filter('tiny_mce_before_init', function($init_array) {
+    $init_array['formats'] = json_encode([
+        // add new format to formats
+        'pmarked' => [
+            'block'    => 'div',
+            'classes'  => 'emphasized-paragraph',
+			'styles'   => array('font-size' => 'var(--fontSize-emphasized, 26px)')
+        ],
+    ], JSON_THROW_ON_ERROR);
+
+    // remove from that array not needed formats
+    $block_formats = [
+        'Paragraph=p',
+		'Large Paragraph=pmarked',    // use the new format in select
+        'Heading 1=h1',
+        'Heading 2=h2',
+        'Heading 3=h3',
+        'Heading 4=h4',
+        'Heading 5=h5',
+        'Heading 6=h6',
+        'Preformatted=pre',
+    ];
+    $init_array['block_formats'] = implode(';', $block_formats);
+
+    return $init_array;
+});
