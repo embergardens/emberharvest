@@ -103,11 +103,11 @@
             "endpoint": 0
         },
         {
-            "key": "field_619d79b0176d5",
-            "label": "Locations",
-            "name": "locations",
+            "key": "field_638270b286136",
+            "label": "Locations Link Type",
+            "name": "locations_link_type",
             "aria-label": "",
-            "type": "repeater",
+            "type": "true_false",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -117,11 +117,107 @@
                 "id": ""
             },
             "show_in_graphql": 1,
-            "collapsed": "field_619d79d9176d6",
+            "message": "Use Advanced Dropdown Menu?",
+            "default_value": 0,
+            "ui_on_text": "Yes",
+            "ui_off_text": "No",
+            "ui": 1
+        },
+        {
+            "key": "field_6382718986137",
+            "label": "Locations Quick Link",
+            "name": "locations_quick_link",
+            "aria-label": "",
+            "type": "group",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_638270b286136",
+                        "operator": "!=",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "block",
+            "sub_fields": [
+                {
+                    "key": "field_6382719d86138",
+                    "label": "Name",
+                    "name": "name",
+                    "aria-label": "",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "default_value": "",
+                    "maxlength": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": ""
+                },
+                {
+                    "key": "field_638271b786139",
+                    "label": "Link",
+                    "name": "link",
+                    "aria-label": "",
+                    "type": "link",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "return_format": ""
+                }
+            ]
+        },
+        {
+            "key": "field_619d79b0176d5",
+            "label": "Locations",
+            "name": "locations",
+            "aria-label": "",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": [
+                [
+                    {
+                        "field": "field_638270b286136",
+                        "operator": "==",
+                        "value": "1"
+                    }
+                ]
+            ],
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "layout": "row",
+            "pagination": 0,
             "min": 0,
             "max": 0,
-            "layout": "row",
+            "collapsed": "field_619d79d9176d6",
             "button_label": "Add State",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_619d79d9176d6",
@@ -251,8 +347,7 @@
                     "return_format": "object",
                     "parent_repeater": "field_619d79b0176d5"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_61a2b61dda5ac",
@@ -535,5 +630,5 @@
     "graphql_types": [
         "AcfOptionsNavigation"
     ],
-    "modified": 1668900769
+    "modified": 1669493504
 }
