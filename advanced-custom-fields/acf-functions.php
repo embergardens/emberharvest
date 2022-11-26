@@ -88,8 +88,9 @@ add_filter('acf/fields/wysiwyg/toolbars', 'harvest_simple_toolbar');
 add_filter('tiny_mce_before_init', function($init_array) {
     $init_array['formats'] = json_encode([
         // add new format to formats
-        'pmarked' => [
-            'block'    => 'div',
+        'emphasized' => [
+            'selector' => 'p',
+			'block'    => 'div',
             'classes'  => 'emphasized-paragraph',
 			'styles'   => array('font-size' => 'var(--fontSize-emphasized, 26px)')
         ],
@@ -98,7 +99,7 @@ add_filter('tiny_mce_before_init', function($init_array) {
     // remove from that array not needed formats
     $block_formats = [
         'Paragraph=p',
-		'Large Paragraph=pmarked',    // use the new format in select
+		'Large Paragraph=emphasized',    // use the new format in select
         'Heading 1=h1',
         'Heading 2=h2',
         'Heading 3=h3',
