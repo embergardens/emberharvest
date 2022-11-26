@@ -90,7 +90,6 @@ add_filter('tiny_mce_before_init', function($init_array) {
         // add new format to formats
         'emphasized' => [
             'selector' => 'p',
-			'block'    => 'div',
             'classes'  => 'emphasized-paragraph',
 			'styles'   => array('font-size' => 'var(--fontSize-emphasized, 26px)')
         ],
