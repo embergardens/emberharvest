@@ -102,6 +102,35 @@
                     "prefix_name": 0
                 },
                 {
+                    "key": "field_63827e6125212",
+                    "label": "Graphic Version",
+                    "name": "graphicVersion",
+                    "aria-label": "",
+                    "type": "true_false",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": [
+                        [
+                            {
+                                "field": "field_61db3052c7f39",
+                                "operator": "==",
+                                "value": "halfWidth"
+                            }
+                        ]
+                    ],
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "show_in_graphql": 1,
+                    "message": "Use graphic version of half-width?",
+                    "default_value": 0,
+                    "ui_on_text": "",
+                    "ui_off_text": "",
+                    "ui": 1
+                },
+                {
                     "key": "field_61db34de94785",
                     "label": "Section Background",
                     "name": "sectionBackground",
@@ -1379,5 +1408,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1668900386
+    "modified": 1669496714
 }
