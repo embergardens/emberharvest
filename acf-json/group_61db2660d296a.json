@@ -216,6 +216,7 @@
             "max": 0,
             "layout": "block",
             "button_label": "Add Section",
+            "rows_per_page": 20,
             "sub_fields": [
                 {
                     "key": "field_61db28134440a",
@@ -292,6 +293,7 @@
                     },
                     "show_in_graphql": 1,
                     "layout": "block",
+                    "parent_repeater": "field_61db271b44409",
                     "sub_fields": [
                         {
                             "key": "field_61db3272bf54a",
@@ -504,8 +506,7 @@
                             "layout": "horizontal",
                             "return_format": "value"
                         }
-                    ],
-                    "parent_repeater": "field_61db271b44409"
+                    ]
                 },
                 {
                     "key": "field_61db2bce44414",
@@ -1197,6 +1198,7 @@
                                     "max": 2,
                                     "layout": "block",
                                     "button_label": "Add Button",
+                                    "rows_per_page": 20,
                                     "sub_fields": [
                                         {
                                             "key": "field_6208073a92e88",
@@ -1243,8 +1245,7 @@
                                             "save_other_choice": 0,
                                             "parent_repeater": "field_6208071992e87"
                                         }
-                                    ],
-                                    "rows_per_page": 20
+                                    ]
                                 }
                             ],
                             "min": "",
@@ -1286,15 +1287,115 @@
                             ],
                             "min": "",
                             "max": ""
+                        },
+                        "layout_6383cfe6c0b5e": {
+                            "key": "layout_6383cfe6c0b5e",
+                            "name": "card_grid_block",
+                            "label": "Card Grid Block",
+                            "display": "block",
+                            "sub_fields": [
+                                {
+                                    "key": "field_6383d07cc0b62",
+                                    "label": "Card",
+                                    "name": "card",
+                                    "aria-label": "",
+                                    "type": "repeater",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "show_in_graphql": 1,
+                                    "layout": "block",
+                                    "min": 1,
+                                    "max": 0,
+                                    "collapsed": "field_6383d0e0c0b63",
+                                    "button_label": "Add Card",
+                                    "rows_per_page": 20,
+                                    "sub_fields": [
+                                        {
+                                            "key": "field_6383d0e0c0b63",
+                                            "label": "Title",
+                                            "name": "title",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": "",
+                                            "parent_repeater": "field_6383d07cc0b62"
+                                        },
+                                        {
+                                            "key": "field_6383d0eac0b64",
+                                            "label": "Image",
+                                            "name": "image",
+                                            "aria-label": "",
+                                            "type": "image",
+                                            "instructions": "",
+                                            "required": 1,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "return_format": "array",
+                                            "library": "all",
+                                            "min_width": "",
+                                            "min_height": "",
+                                            "min_size": "",
+                                            "max_width": "",
+                                            "max_height": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "preview_size": "medium",
+                                            "parent_repeater": "field_6383d07cc0b62"
+                                        },
+                                        {
+                                            "key": "field_6383d0f4c0b65",
+                                            "label": "Link",
+                                            "name": "link",
+                                            "aria-label": "",
+                                            "type": "link",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "show_in_graphql": 1,
+                                            "return_format": "array",
+                                            "parent_repeater": "field_6383d07cc0b62"
+                                        }
+                                    ]
+                                }
+                            ],
+                            "min": "",
+                            "max": ""
                         }
                     },
-                    "button_label": "Add Block",
                     "min": "",
                     "max": "",
+                    "button_label": "Add Block",
                     "parent_repeater": "field_61db271b44409"
                 }
-            ],
-            "rows_per_page": 20
+            ]
         },
         {
             "key": "field_61e44a7881c00",
@@ -1408,5 +1509,5 @@
         "Page",
         "DefaultTemplate"
     ],
-    "modified": 1669496714
+    "modified": 1670107741
 }
